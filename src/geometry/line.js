@@ -1,13 +1,13 @@
 require('ts-tooling');
 
-class MultiPoint {
+class Line {
     get type() {
-        return 'MultiPoint';
+        return 'LineString';
     }
 
     constructor(points, crs) {
-        this.coordinates = points;
         this.crs = crs || null;
+        this.coordinates = points;
         if (Array.isArray(points) && points.length > 0 && points.ElementAt(0).coordinates) {
             this.coordinates = points.Convert(p => p.coordinates);
             if (points.ElementAt(0).crs) {
@@ -17,4 +17,4 @@ class MultiPoint {
     }
 }
 
-module.exports = {MultiPoint};
+module.exports = {Line};
