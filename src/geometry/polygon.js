@@ -1,3 +1,4 @@
+const {getEpsg, reproject} = require('../reference_system/transform');
 require('ts-tooling');
 
 class Polygon {
@@ -14,6 +15,10 @@ class Polygon {
                 this.crs = rings.ElementAt(0).crs;
             }
         }
+    }
+
+    transform(target) {
+        this.coordinates = this.coordinates.Convert(ring => reproject(getEpsg(target.srId), getEpsg(this.crs.srId), ring));
     }
 }
 

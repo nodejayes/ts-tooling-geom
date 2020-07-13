@@ -8,7 +8,7 @@ class MultiLine {
     constructor(lines, crs) {
         this.coordinates = lines;
         this.crs = crs || null;
-        if (Array.isArray(lines) && lines.length > 0 && lines.ElementAt(0).coordinates) {
+        if (Array.isArray(lines) && lines.Any() && lines.ElementAt(0).coordinates) {
             this.coordinates = lines.Convert(l => l.coordinates);
             if (lines.ElementAt(0).crs) {
                 this.crs = lines.ElementAt(0).crs;
