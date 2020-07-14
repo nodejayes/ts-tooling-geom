@@ -7,6 +7,7 @@ const {Polygon} = require('./geometry/polygon');
 const {MultiPolygon} = require('./geometry/multi.polygon');
 const {Feature} = require('./geometry/feature');
 const {FeatureCollection} = require('./geometry/feature.collection');
+const {readJson} = require('./io/json/reader');
 
 module.exports = {
     ReferenceSystem, ReferenceSystemProperties,
@@ -14,4 +15,5 @@ module.exports = {
     Line, MultiLine,
     Polygon, MultiPolygon,
     Feature, FeatureCollection,
+    readJson,
 };
