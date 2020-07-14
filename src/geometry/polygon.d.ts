@@ -5,4 +5,5 @@ export class Polygon {
     coordinates: number[][][];
     crs?: ReferenceSystem;
     constructor(rings: number[][][] | Line[], crs?: ReferenceSystem);
+    transform(target: ReferenceSystem);
 }

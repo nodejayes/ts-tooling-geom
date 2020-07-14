@@ -49,4 +49,21 @@ describe('Polygon Tests', () => {
             assert.equal(p.crs.properties.name, 'EPSG:4326');
         });
     });
+    describe('[Method]: transform', () => {
+        it('transform polygon wgs84 to PseudoMercator', () => {
+            const p = new Polygon([
+                [[1,2], [3,4], [5,6], [1,2]]
+            ], new ReferenceSystem(4326));
+            p.transform(new ReferenceSystem(3857));
+            assert.deepEqual(p.coordinates, [
+                [
+                    [111319.49079327357, 222684.20850554455],
+                    [333958.4723798207, 445640.1096560266],
+                    [556597.4539663679, 669141.0570442454],
+                    [111319.49079327357, 222684.20850554455],
+                ],
+            ]);
+            assert.equal(p.crs.srId, 3857);
+        });
+    });
 });

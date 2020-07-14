@@ -18,7 +18,8 @@ class Polygon {
     }
 
     transform(target) {
-        this.coordinates = this.coordinates.Convert(ring => reproject(getEpsg(target.srId), getEpsg(this.crs.srId), ring));
+        this.coordinates = this.coordinates.Convert(ring => reproject(getEpsg(this.crs.srId), getEpsg(target.srId), ring));
+        this.crs = target;
     }
 }
 

@@ -1,3 +1,4 @@
+const {reproject, getEpsg} = require('../reference_system/transform');
 require('ts-tooling');
 
 class Line {
@@ -14,6 +15,11 @@ class Line {
                 this.crs = points.ElementAt(0).crs;
             }
         }
+    }
+
+    transform(target) {
+        this.coordinates = reproject(getEpsg(this.crs.srId), getEpsg(target.srId), this.coordinates);
+        this.crs = target;
     }
 }
 

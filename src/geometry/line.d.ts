@@ -5,4 +5,5 @@ export class Line {
     coordinates: number[][];
     crs?: ReferenceSystem;
     constructor(coordinates: number[][] | Point[], crs?: ReferenceSystem);
+    transform(target: ReferenceSystem);
 }

@@ -1,4 +1,4 @@
-const {transform} = require('proj4');
+const {getEpsg, reproject} = require('../reference_system/transform');
 
 class Point {
     get type() {
@@ -10,7 +10,8 @@ class Point {
         this.crs = crs || null;
     }
 
-    transform(source, target) {
+    transform(target) {
+        this.coordinates = reproject(getEpsg(this.crs.srId), getEpsg(target.srId), [this.coordinates])[0];
         this.crs = target;
     }
 }

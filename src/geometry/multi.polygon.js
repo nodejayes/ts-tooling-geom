@@ -1,3 +1,6 @@
+const {reproject, getEpsg} = require('../reference_system/transform');
+require('ts-tooling');
+
 class MultiPolygon {
     get type() {
         return 'MultiPolygon';
@@ -12,6 +15,11 @@ class MultiPolygon {
                 this.crs = polygons.ElementAt(0).crs;
             }
         }
+    }
+
+    transform(target) {
+        this.coordinates = this.coordinates.Convert(p => p.Convert(ring => reproject(getEpsg(this.crs.srId), getEpsg(target.srId), ring)));
+        this.crs = target;
     }
 }
 

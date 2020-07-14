@@ -6,4 +6,5 @@ export class MultiPolygon {
     coordinates: number[][][][];
     crs?: ReferenceSystem;
     constructor(polygons: number[][][][] | Polygon[], crs?: ReferenceSystem);
+    transform(target: ReferenceSystem);
 }

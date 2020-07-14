@@ -1,3 +1,4 @@
+const {reproject, getEpsg} = require('../reference_system/transform');
 require('ts-tooling');
 
 class MultiLine {
@@ -14,6 +15,11 @@ class MultiLine {
                 this.crs = lines.ElementAt(0).crs;
             }
         }
+    }
+
+    transform(target) {
+        this.coordinates = this.coordinates.Convert(l => reproject(getEpsg(this.crs.srId), getEpsg(target.srId), l));
+        this.crs = target;
     }
 }
 

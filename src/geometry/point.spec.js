@@ -18,4 +18,12 @@ describe('Point Tests', () => {
             assert.isNull(p.crs);
         });
     });
+    describe('[Method]: transform', () => {
+       it('transform point from wgs84 to PseudoMercator', () => {
+           const p = new Point([1,2], new ReferenceSystem(4326));
+           p.transform(new ReferenceSystem(3857));
+           assert.deepEqual(p.coordinates, [111319.49079327357, 222684.20850554455]);
+           assert.equal(p.crs.srId, 3857);
+       });
+    });
 });

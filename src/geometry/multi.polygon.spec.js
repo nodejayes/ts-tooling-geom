@@ -49,4 +49,23 @@ describe('MultiPolygon Tests', () => {
             assert.equal(p.crs.properties.name, 'EPSG:4326');
         });
     });
+    describe('[Method]: transform', () => {
+        it('transform wgs84 to PseudoMercator', () => {
+            const mp = new MultiPolygon([
+                [[[1,2], [3,4], [5,6], [1,2]]],
+            ], new ReferenceSystem(4326));
+            mp.transform(new ReferenceSystem(3857));
+            assert.deepEqual(mp.coordinates, [
+                [
+                    [
+                        [111319.49079327357, 222684.20850554455],
+                        [333958.4723798207, 445640.1096560266],
+                        [556597.4539663679, 669141.0570442454],
+                        [111319.49079327357, 222684.20850554455],
+                    ]
+                ],
+            ]);
+            assert.equal(mp.crs.srId, 3857);
+        });
+    });
 });

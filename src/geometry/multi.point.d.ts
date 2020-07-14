@@ -6,4 +6,5 @@ export class MultiPoint {
     coordinates: number[][];
     crs?: ReferenceSystem;
     constructor(points: number[][] | Point[], crs?: ReferenceSystem);
+    transform(target: ReferenceSystem);
 }

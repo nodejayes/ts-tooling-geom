@@ -6,4 +6,5 @@ export class MultiLine {
     coordinates: number[][][];
     crs?: ReferenceSystem;
     constructor(lines: number[][][] | Line[], crs?: ReferenceSystem);
+    transform(target: ReferenceSystem);
 }

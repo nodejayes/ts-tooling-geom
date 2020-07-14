@@ -47,4 +47,12 @@ describe('MultiPoint Tests', () => {
             assert.equal(p.crs.properties.name, 'EPSG:4326');
         });
     });
+    describe('[Method]: transform', () => {
+        it('transform from wgs84 to PseudoMercator', () => {
+            const mp = new MultiPoint([[1,2]], new ReferenceSystem(4326));
+            mp.transform(new ReferenceSystem(3857));
+            assert.deepEqual(mp.coordinates, [[111319.49079327357, 222684.20850554455]]);
+            assert.equal(mp.crs.srId, 3857);
+        });
+    });
 });

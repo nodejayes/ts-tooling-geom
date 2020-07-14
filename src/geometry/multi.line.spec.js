@@ -53,4 +53,12 @@ describe('MultiLine Tests', () => {
             assert.equal(p.crs.properties.name, 'EPSG:4326');
         });
     });
+    describe('[Method]: transform', () => {
+        it('transform from wgs84 to PseudoMercator', () => {
+            const l = new MultiLine([[[1,2], [3,4]]], new ReferenceSystem(4326));
+            l.transform(new ReferenceSystem(3857));
+            assert.deepEqual(l.coordinates, [[[111319.49079327357, 222684.20850554455],[333958.4723798207, 445640.1096560266]]]);
+            assert.equal(l.crs.srId, 3857);
+        });
+    });
 });

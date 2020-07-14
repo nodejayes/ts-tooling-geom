@@ -5,4 +5,5 @@ export class Point {
     coordinates: number[];
     crs?: ReferenceSystem;
     constructor(coordinate: number[], crs?: any);
+    transform(target: ReferenceSystem);
 }

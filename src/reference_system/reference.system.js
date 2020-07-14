@@ -12,7 +12,7 @@ class ReferenceSystem {
     }
 
     get srId() {
-        return NumberFactory.NewInteger(this.properties.ReplaceAll('EPSG:', ''))
+        return NumberFactory.NewInteger(this.properties.name.ReplaceAll('EPSG:', ''))
     }
 
     constructor(srid) {
