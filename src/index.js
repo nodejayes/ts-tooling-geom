@@ -9,8 +9,12 @@ const {MultiPolygon} = require('./geometry/multi.polygon');
 const {Feature} = require('./geometry/feature');
 const {FeatureCollection} = require('./geometry/feature.collection');
 
+const {Triangle} = require('./vector/triangle');
+
 const {readJson} = require('./io/json/reader');
 const {writeJson} = require('./io/json/writer');
+
+const {DistanceTool} = require('./tools/distance');
 
 module.exports = {
     GeometryTypes,
@@ -19,5 +23,7 @@ module.exports = {
     Line, MultiLine,
     Polygon, MultiPolygon,
     Feature, FeatureCollection,
-    readJson, writeJson
+    Triangle,
+    readJson, writeJson,
+    DistanceTool,
 };
