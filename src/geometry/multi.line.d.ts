@@ -1,8 +1,9 @@
 import {ReferenceSystem} from '..';
 import {Line} from './line';
+import {GeometryTypes} from '../definitions/geometry.types';
 
 export class MultiLine {
-    type: string;
+    type: GeometryTypes.multiLine;
     coordinates: number[][][];
     crs?: ReferenceSystem;
     constructor(lines: number[][][] | Line[], crs?: ReferenceSystem);

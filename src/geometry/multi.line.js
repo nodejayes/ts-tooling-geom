@@ -1,9 +1,10 @@
 const {reproject, getEpsg} = require('../reference_system/transform');
+const {GeometryTypes} = require('../definitions/geometry.types');
 require('ts-tooling');
 
 class MultiLine {
     get type() {
-        return 'MultiLineString';
+        return GeometryTypes.multiLine;
     }
 
     constructor(lines, crs) {

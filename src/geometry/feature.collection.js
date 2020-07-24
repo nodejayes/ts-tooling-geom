@@ -1,8 +1,9 @@
+const {GeometryTypes} = require('../definitions/geometry.types');
 require('ts-tooling');
 
 class FeatureCollection {
     get type() {
-        return 'FeatureCollection';
+        return GeometryTypes.featureCollection;
     }
 
     constructor(features) {

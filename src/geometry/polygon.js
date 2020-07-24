@@ -1,9 +1,10 @@
 const {getEpsg, reproject} = require('../reference_system/transform');
+const {GeometryTypes} = require('../definitions/geometry.types');
 require('ts-tooling');
 
 class Polygon {
     get type() {
-        return 'Polygon';
+        return GeometryTypes.polygon;
     }
 
     constructor(rings, crs) {

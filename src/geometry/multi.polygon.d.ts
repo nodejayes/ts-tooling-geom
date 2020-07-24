@@ -1,8 +1,9 @@
 import {ReferenceSystem} from '..';
 import {Polygon} from './polygon';
+import {GeometryTypes} from '../definitions/geometry.types';
 
 export class MultiPolygon {
-    type: string;
+    type: GeometryTypes.multiPolygon;
     coordinates: number[][][][];
     crs?: ReferenceSystem;
     constructor(polygons: number[][][][] | Polygon[], crs?: ReferenceSystem);

@@ -1,6 +1,8 @@
+const {GeometryTypes} = require('../definitions/geometry.types');
+
 class Feature {
     get type() {
-        return 'Feature';
+        return GeometryTypes.feature;
     }
 
     constructor(geometry, properties) {

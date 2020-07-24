@@ -939,10 +939,10 @@ ieee754@^1.1.4:
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
   integrity sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==
 
-immer@^6.0.3:
-  version "6.0.9"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-6.0.9.tgz#b9dd69b8e69b3a12391e87db1e3ff535d1b26485"
-  integrity sha512-SyCYnAuiRf67Lvk0VkwFvwtDoEiCMjeamnHvRfnVDyc7re1/rQrNxuL+jJ7lA3WvdC4uznrvbmm+clJ9+XXatg==
+immer@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-7.0.5.tgz#8af347db5b60b40af8ae7baf1784ea4d35b5208e"
+  integrity sha512-TtRAKZyuqld2eYjvWgXISLJ0ZlOl1OOTzRmrmiY8SlB0dnAhZ1OiykIDL5KDFNaPHDXiLfGQFNJGtet8z8AEmg==
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -1327,7 +1327,7 @@ lower-case@^2.0.1:
   dependencies:
     tslib "^1.10.0"
 
-luxon@^1.23.0:
+luxon@^1.24.1:
   version "1.24.1"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.24.1.tgz#a8383266131ed4eaed4b5f430f96f3695403a52a"
   integrity sha512-CgnIMKAWT0ghcuWFfCWBnWGOddM0zu6c4wZAWmD0NN7MZTnro0+833DF6tJep+xlxRPg4KtsYEHYLfTMBQKwYg==
@@ -1503,7 +1503,7 @@ object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.1.1:
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
-object-sizeof@^1.6.0:
+object-sizeof@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/object-sizeof/-/object-sizeof-1.6.1.tgz#35971f3fd2102bd8b51c67b0a53ed773ff77ab56"
   integrity sha512-gNKGcRnDRXwEpAdwUY3Ef+aVZIrcQVXozSaVzHz6Pv4JxysH8vf5F+nIgsqW5T/YNwZNveh0mIW7PEH1O2MrDw==
@@ -1721,7 +1721,7 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-rxjs@^6.5.5:
+rxjs@^6.6.0:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.0.tgz#af2901eedf02e3a83ffa7f886240ff9018bbec84"
   integrity sha512-3HMA8z/Oz61DUHe+SdOiQyzIf4tOx5oQHmMir7IZEu6TMqCLHT4LRcmNaUS0NwOz8VLvmmBduMsoaUvMaIiqzg==
@@ -1952,7 +1952,7 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-ts-node@^8.10.2, ts-node@^8.8.2:
+ts-node@^8.10.2:
   version "8.10.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.2.tgz#eee03764633b1234ddd37f8db9ec10b75ec7fb8d"
   integrity sha512-ISJJGgkIpDdBhWVu3jufsWpK3Rzo7bdiIXJjQc0ynKxVOVcg2oIrf2H2cejminGrptVc6q6/uynAHNCuWGbpVA==
@@ -1963,19 +1963,19 @@ ts-node@^8.10.2, ts-node@^8.8.2:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
-ts-tooling@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/ts-tooling/-/ts-tooling-3.3.0.tgz#a3db2de907f72f2dd169f4cbe6c6ff67ab856633"
-  integrity sha512-O9M3rMd4MvD1hzL/uJvPK51yfgjhMk2f+AIJ2Z5lcrcU8QNeydX9UMX2SlagGmz2IVWX7Pf43SHb3o7ePqMfKw==
+ts-tooling@^3.4.0-beta.0:
+  version "3.4.0-beta.0"
+  resolved "https://registry.yarnpkg.com/ts-tooling/-/ts-tooling-3.4.0-beta.0.tgz#1a087a3ff5fef0ef7452f738a2fcd7969b488427"
+  integrity sha512-1OW6h0qjeQpTlCPPG4KDvysr/9UXsfPhl9pWFDLdXITQ4n6dEOPoQd0EIT+SFTj/qoJ57ulOgca4b6FJnGAKbQ==
   dependencies:
     change-case "^4.1.1"
-    immer "^6.0.3"
-    luxon "^1.23.0"
+    immer "^7.0.5"
+    luxon "^1.24.1"
     lz-string "^1.4.4"
-    object-sizeof "^1.6.0"
-    rxjs "^6.5.5"
-    ts-node "^8.8.2"
-    uuid "^7.0.3"
+    object-sizeof "^1.6.1"
+    rxjs "^6.6.0"
+    ts-node "^8.10.2"
+    uuid "^8.2.0"
 
 tslib@^1.10.0, tslib@^1.9.0:
   version "1.13.0"
@@ -2040,10 +2040,10 @@ uuid@^3.3.3:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
-  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
+uuid@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.2.0.tgz#cb10dd6b118e2dada7d0cd9730ba7417c93d920e"
+  integrity sha512-CYpGiFTUrmI6OBMkAdjSDM0k5h8SkkiTP4WAjQgDgNB1S3Ou9VBEvr6q0Kv2H1mMk7IWfxYGpMH5sd5AvcIV2Q==
 
 which-module@^2.0.0:
   version "2.0.0"

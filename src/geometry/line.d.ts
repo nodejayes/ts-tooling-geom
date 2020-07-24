@@ -1,7 +1,8 @@
 import {Point, ReferenceSystem} from '..';
+import {GeometryTypes} from '../definitions/geometry.types';
 
 export class Line {
-    type: string;
+    type: GeometryTypes.line;
     coordinates: number[][];
     crs?: ReferenceSystem;
     constructor(coordinates: number[][] | Point[], crs?: ReferenceSystem);

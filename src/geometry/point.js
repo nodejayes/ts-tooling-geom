@@ -1,8 +1,9 @@
 const {getEpsg, reproject} = require('../reference_system/transform');
+const {GeometryTypes} = require('../definitions/geometry.types');
 
 class Point {
     get type() {
-        return 'Point';
+        return GeometryTypes.point;
     }
 
     constructor(coordinate, crs) {

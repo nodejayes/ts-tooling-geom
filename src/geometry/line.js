@@ -1,9 +1,10 @@
 const {reproject, getEpsg} = require('../reference_system/transform');
+const {GeometryTypes} = require('../definitions/geometry.types');
 require('ts-tooling');
 
 class Line {
     get type() {
-        return 'LineString';
+        return GeometryTypes.line;
     }
 
     constructor(points, crs) {

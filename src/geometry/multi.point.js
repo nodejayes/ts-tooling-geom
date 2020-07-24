@@ -1,9 +1,10 @@
 const {reproject, getEpsg} = require('../reference_system/transform');
+const {GeometryTypes} = require('../definitions/geometry.types');
 require('ts-tooling');
 
 class MultiPoint {
     get type() {
-        return 'MultiPoint';
+        return GeometryTypes.multiPoint;
     }
 
     constructor(points, crs) {

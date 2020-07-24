@@ -1,9 +1,10 @@
 const {reproject, getEpsg} = require('../reference_system/transform');
+const {GeometryTypes} = require('../definitions/geometry.types');
 require('ts-tooling');
 
 class MultiPolygon {
     get type() {
-        return 'MultiPolygon';
+        return GeometryTypes.multiPolygon;
     }
 
     constructor(polygons, crs) {
