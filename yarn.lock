@@ -1963,10 +1963,10 @@ ts-node@^8.10.2:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
-ts-tooling@^3.4.0-beta.0:
-  version "3.4.0-beta.0"
-  resolved "https://registry.yarnpkg.com/ts-tooling/-/ts-tooling-3.4.0-beta.0.tgz#1a087a3ff5fef0ef7452f738a2fcd7969b488427"
-  integrity sha512-1OW6h0qjeQpTlCPPG4KDvysr/9UXsfPhl9pWFDLdXITQ4n6dEOPoQd0EIT+SFTj/qoJ57ulOgca4b6FJnGAKbQ==
+ts-tooling@^3.4.0-beta.1:
+  version "3.4.0-beta.1"
+  resolved "https://registry.yarnpkg.com/ts-tooling/-/ts-tooling-3.4.0-beta.1.tgz#1b8ac9d44727ff03da1f1a4d10cb84d6f82e1ad6"
+  integrity sha512-maZz3IBkXz58CAYeAobSvTBzUzhjWrgD61TohVdWH0sJf8JgL2xIg5rlU0EEhyTt+z3dZAaB0yUN5Kn3PSVcvw==
   dependencies:
     change-case "^4.1.1"
     immer "^7.0.5"
