@@ -10,7 +10,7 @@ describe('LineTool Test', () => {
     describe('[Method]: travelAlong', () => {
         it('travel line with one segment', () => {
             const l = new Line([[0,0], [1,1]], new ReferenceSystem(4326));
-            const pt = lt.travelAlong(l, 0.5);
+            const pt = lt.travelAlong(l, 100);
             assert.deepEqual(pt.coordinates, [0.5, 0.5]);
             assert.equal(pt.crs.srId, 4326);
         });

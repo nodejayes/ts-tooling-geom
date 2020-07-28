@@ -19,7 +19,7 @@ class LineTool {
         line.coordinates.ForSegment((current, next) => {
             const pt1 = new Point(current, line.crs);
             const pt2 = new Point(next, line.crs);
-            const segementLength = this.distanceTool.haversine(pt1, pt2);
+            const segementLength = this.distanceTool.haversine(pt1, pt2) * 1000;
             traveled += segementLength;
             if (distance > traveled) {
                 return;
@@ -29,10 +29,11 @@ class LineTool {
                 pt = new Point(next, line.crs);
                 return;
             }
-            pt = new Point([
-                next[0] * offset / segementLength,
-                next[1] * offset / segementLength,
-            ], line.crs);
+            const diffX = Math.abs(current[0] - next[0]);
+            const diffY = Math.abs(current[1] - next[1]);
+            const newX = (current[0] === 0 ? 0.000001 : current[0]) * (offset * diffX / segementLength);
+            const newY = (current[1] === 0 ? 0.000001 : current[1]) * (offset * diffY / segementLength);
+            pt = new Point([newX, newY], line.crs);
         });
         return pt;
     }
